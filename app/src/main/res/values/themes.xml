@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Platform theme only (proven pattern: Material3 DayNight parents do
+         not link in this build setup). All real styling is Compose. -->
+    <style name="Theme.OshudhReminder" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

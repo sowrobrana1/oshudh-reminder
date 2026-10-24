@@ -23,9 +23,11 @@ android {
 
     // Stable committed DEBUG key (PKCS12, generated with openssl) — so
     // every build signs with the same key and updates install over each
-    // other. The RELEASE key must never be committed.
+    // other. AGP already defines a "debug" config, so configure it
+    // in place instead of creating a second one. The RELEASE key must
+    // never be committed.
     signingConfigs {
-        create("debug") {
+        getByName("debug") {
             storeFile = file("../keystores/debug.keystore")
             storePassword = "android"
             keyAlias = "oshudh-debug"
